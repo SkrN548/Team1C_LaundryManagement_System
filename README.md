@@ -1,1 +1,1 @@
-# MY-PROJECT
+Laundry management system
