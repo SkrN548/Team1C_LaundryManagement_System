@@ -1,0 +1,27 @@
+<html>
+<!--<body background="https://img.freepik.com/free-photo/soap-bubbles-background_36860-230.jpg?size=626&amp;ext=jpg" width="304" height="203" style="margin-top: 75px;">-->
+{% load static %}
+<style>
+body { 
+  background: lightblue url("{% static 'images/11.jpeg' %}") no-repeat fixed center; 
+}
+</style>
+<center>
+	{% if ordered %}
+		<h1>Thank you for Loggin!</h1>
+	
+	{% else %}
+		<h1>Order Here</h1>
+			<h3></h3>
+		
+			<form enctype="multipart/form-data" method="POST">
+		
+		{% csrf_token %}
+		{{ order_form.as_p }}
+	        		<input type="submit" name="" value="Request">
+			</form>
+	{% endif %}
+</center>
+<a href="success.html">
+</body>
+</html>

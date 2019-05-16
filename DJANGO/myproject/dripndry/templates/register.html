@@ -1,0 +1,37 @@
+
+{% load staticfiles %}
+{% block body_block %}
+<html>
+<head>
+<title>Register Drip n Dry</title><b>
+<body style = "background:url(/static/images/reg.jpeg);background-repeat:no-repeat;background-size:1366px 738px">
+            <div class= "container">
+	    <div class= "jumbotron">
+      <center>       
+<h1>
+
+                     {% if registered %}
+		<h1>Thank you for registering!</h1>
+	
+	{% else %}
+		<h1>Register Drip n Dry</h1>
+			<form enctype="multipart/form-data" method = "POST">
+		
+                      
+		{% csrf_token %}
+		{{ user_form.as_p }}
+					<input type = "submit" name = ""  value = "Register"> 
+     
+</form>
+
+ {% endif %}
+					
+			
+		
+		<div class="copyright">
+			<p>© 2019 D<span>rip n </span>Dry | All rights reserved </p>
+		</div>
+		<!-- //copyright --> 
+	</div></b></h1>
+</div>	</center> <center><a href = "user_login"><b>Login</b></a></center></body>
+{% endblock %}

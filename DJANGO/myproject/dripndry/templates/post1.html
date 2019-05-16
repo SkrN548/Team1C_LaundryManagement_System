@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Orders</title>
+</head>
+<body>
+
+
+
+<h1>Details of Customers</h1>
+<table border="1" width="600">
+<tr>
+<td>pickup_day</td>
+<td>slot</td>
+<td>immediate-delivery</td>
+<td>cloth</td>
+<td>quantity</td>
+<td>treatment</td>
+</tr>
+
+{% for ordering in allorderings %}
+<tr>
+<td>{{ ordering.pickup_day}}</td>
+<td>{{ ordering.slot }}</td>
+<td>{{ ordering.immediate_delivery}}</td>
+<td>{{ ordering.cloth }}</td>
+<td>{{ ordering.quantity}}</td>
+<td>{{ ordering.treatment}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<center><a href = "index"><b>Logout</b></a></center>
+</body>
+</html>
